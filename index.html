@@ -1,102 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>LeadSpeed — Prospecção Inteligente</title>
-
-    <meta
-        name="description"
-        content="Encontre empresas e transforme oportunidades em clientes com o LeadSpeed."
-    >
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeadSpeed — Painel de Prospecção</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="app">
+  <div class="app">
 
     <!-- SIDEBAR -->
     <aside class="sidebar">
 
-        <div class="brand">
-            <div class="brand-logo">L</div>
+      <div class="brand">
+        <div class="brand-icon">L</div>
+        <div>
+          <strong>LeadSpeed</strong>
+          <span>Prospecting</span>
+        </div>
+      </div>
 
-            <div class="brand-name">
-                Lead<span>Speed</span>
-            </div>
+      <nav class="navigation">
+
+        <div class="nav-label">PROSPECÇÃO</div>
+
+        <button class="nav-item active" data-section="search">
+          <span>⌕</span>
+          <div>
+            <strong>Buscar leads</strong>
+            <small>Encontrar empresas</small>
+          </div>
+        </button>
+
+        <button class="nav-item" data-section="saved">
+          <span>☆</span>
+          <div>
+            <strong>Leads salvos</strong>
+            <small>Seus potenciais clientes</small>
+          </div>
+        </button>
+
+        <button class="nav-item" data-section="history">
+          <span>◷</span>
+          <div>
+            <strong>Histórico</strong>
+            <small>Pesquisas realizadas</small>
+          </div>
+        </button>
+
+        <div class="nav-label">FERRAMENTAS</div>
+
+        <button class="nav-item" data-section="approaches">
+          <span>✦</span>
+          <div>
+            <strong>Abordagens</strong>
+            <small>Mensagens prontas</small>
+          </div>
+        </button>
+
+        <button class="nav-item" data-section="settings">
+          <span>⚙</span>
+          <div>
+            <strong>Configurações</strong>
+            <small>Preferências</small>
+          </div>
+        </button>
+
+      </nav>
+
+      <div class="sidebar-bottom">
+
+        <div class="private-card">
+          <div class="private-dot"></div>
+          <div>
+            <strong>Modo privado</strong>
+            <span>Uso pessoal</span>
+          </div>
         </div>
 
-
-        <nav class="navigation">
-
-            <button class="nav-item active">
-                <span class="nav-icon">⌕</span>
-                <span>Buscar leads</span>
-            </button>
-
-            <button class="nav-item">
-                <span class="nav-icon">☆</span>
-                <span>Leads salvos</span>
-            </button>
-
-            <button class="nav-item">
-                <span class="nav-icon">◷</span>
-                <span>Histórico</span>
-            </button>
-
-        </nav>
-
-
-        <div class="sidebar-footer">
-
-            <div class="pro-card">
-
-                <div class="pro-icon">⚡</div>
-
-                <strong>LeadSpeed Pro</strong>
-
-                <p>
-                    200 créditos por mês,
-                    busca internacional e
-                    recursos avançados.
-                </p>
-
-                <button onclick="openPro()">
-                    Conhecer o Pro →
-                </button>
-
-            </div>
-
-
-            <div class="profile">
-
-                <div class="profile-avatar">
-                    J
-                </div>
-
-                <div class="profile-info">
-                    <strong>João</strong>
-                    <span>Plano grátis</span>
-                </div>
-
-                <button class="profile-menu">
-                    •••
-                </button>
-
-            </div>
-
+        <div class="profile">
+          <div class="avatar">J</div>
+          <div class="profile-info">
+            <strong>João</strong>
+            <span>Administrador</span>
+          </div>
+          <span class="profile-more">•••</span>
         </div>
+
+      </div>
 
     </aside>
 
@@ -104,267 +97,404 @@
     <!-- MAIN -->
     <main class="main">
 
-        <!-- TOPBAR -->
-        <header class="topbar">
+      <!-- TOPBAR -->
+      <header class="topbar">
 
-            <div class="welcome">
+        <div>
+          <div class="breadcrumb">LeadSpeed / Prospecção</div>
+          <h1 id="pageTitle">Buscar leads</h1>
+        </div>
 
-                <span class="eyebrow">
-                    PROSPECÇÃO INTELIGENTE
-                </span>
+        <div class="top-actions">
+          <div class="status">
+            <span></span>
+            Sistema operacional
+          </div>
 
-                <h1>
-                    Encontre seus próximos
-                    <span>clientes.</span>
-                </h1>
+          <button class="icon-button" title="Notificações">
+            ♢
+          </button>
+        </div>
 
-                <p>
-                    Pesquise empresas, descubra oportunidades
-                    e comece novas conversas.
-                </p>
+      </header>
 
+
+      <!-- SEARCH SECTION -->
+      <section class="section active" id="searchSection">
+
+        <div class="hero">
+
+          <div>
+            <div class="eyebrow">
+              <span>●</span> PROSPECÇÃO INTELIGENTE
             </div>
 
+            <h2>
+              Encontre empresas que podem<br>
+              <span>se tornar seus clientes.</span>
+            </h2>
 
-            <div class="credit-box">
+            <p>
+              Pesquise negócios no Brasil ou no exterior e analise
+              os sinais públicos de cada empresa.
+            </p>
+          </div>
 
-                <span>SEUS CRÉDITOS</span>
-
-                <div>
-                    <strong id="creditCount">10</strong>
-                    <small>/ 10</small>
-                </div>
-
-                <button onclick="openPro()">
-                    Comprar créditos
-                </button>
-
-            </div>
-
-        </header>
+        </div>
 
 
-        <!-- SEARCH -->
-        <section class="search-card">
+        <!-- SEARCH BOX -->
+        <div class="search-panel">
 
-            <div class="search-heading">
+          <div class="market-switch">
 
-                <div class="search-heading-icon">
-                    ⌕
-                </div>
+            <button class="market active" data-market="brazil">
+              🇧🇷 Brasil
+            </button>
 
-                <div>
-                    <h2>Nova busca</h2>
+            <button class="market" data-market="international">
+              🌎 Internacional
+            </button>
 
-                    <p>
-                        Encontre negócios dentro do seu público-alvo.
-                    </p>
-                </div>
+            <button class="market" data-market="all">
+              🌐 Todos
+            </button>
 
-            </div>
-
-
-            <div class="search-form">
-
-                <div class="input-group">
-
-                    <label for="category">
-                        Categoria
-                    </label>
-
-                    <select id="category">
-
-                        <option value="">
-                            Selecione uma categoria
-                        </option>
-
-                        <option value="Restaurante">
-                            Restaurante
-                        </option>
-
-                        <option value="Pizzaria">
-                            Pizzaria
-                        </option>
-
-                        <option value="Pet Shop">
-                            Pet Shop
-                        </option>
-
-                    </select>
-
-                </div>
+          </div>
 
 
-                <div class="input-group">
+          <div class="search-grid">
 
-                    <label for="location">
-                        Localização
-                    </label>
+            <div class="field large">
+              <label>O que você procura?</label>
 
-                    <input
-                        id="location"
-                        type="text"
-                        placeholder="Ex: Jales, SP"
-                    >
-
-                </div>
-
-
-                <div class="input-group">
-
-                    <label for="radius">
-                        Raio
-                    </label>
-
-                    <select id="radius">
-
-                        <option value="5">
-                            5 km
-                        </option>
-
-                        <option value="10">
-                            10 km
-                        </option>
-
-                        <option value="25">
-                            25 km
-                        </option>
-
-                        <option value="50">
-                            50 km
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <button
-                    class="search-button"
-                    id="searchButton"
-                    onclick="searchLeads()"
+              <div class="input-wrap">
+                <span>⌕</span>
+                <input
+                  id="category"
+                  type="text"
+                  placeholder="Ex: hamburgueria, barbearia, clínica..."
                 >
-
-                    <span class="search-symbol">⌕</span>
-
-                    <span>
-                        Buscar oportunidades
-                    </span>
-
-                    <small>
-                        3 créditos
-                    </small>
-
-                </button>
-
+              </div>
             </div>
 
-        </section>
 
+            <div class="field">
 
-        <!-- RESULTADOS -->
-        <section class="results-section">
+              <label>Localização</label>
 
-            <div class="section-header">
-
-                <div>
-                    <span class="section-eyebrow">
-                        OPORTUNIDADES
-                    </span>
-
-                    <h2>
-                        Empresas encontradas
-                    </h2>
-                </div>
-
-                <button class="filter-button">
-                    ☷ Filtros
-                </button>
+              <div class="input-wrap">
+                <span>⌖</span>
+                <input
+                  id="location"
+                  type="text"
+                  placeholder="Cidade, estado ou país"
+                >
+              </div>
 
             </div>
 
 
-            <div id="results">
+            <div class="field">
 
-                <div class="empty-state">
+              <label>Raio</label>
 
-                    <div class="empty-icon">
-                        ⌕
-                    </div>
-
-                    <h3>
-                        Comece sua prospecção
-                    </h3>
-
-                    <p>
-                        Escolha uma categoria, informe a localização
-                        e encontre novas oportunidades.
-                    </p>
-
-                </div>
+              <select id="radius">
+                <option value="5">5 km</option>
+                <option value="10" selected>10 km</option>
+                <option value="25">25 km</option>
+                <option value="50">50 km</option>
+                <option value="100">100 km</option>
+              </select>
 
             </div>
 
-        </section>
+          </div>
+
+
+          <div class="advanced-row">
+
+            <button class="filter-button" id="filterButton">
+              ⚙ Filtros avançados
+              <span id="filterCount">0</span>
+            </button>
+
+            <div class="search-hint">
+              Pesquisas ilimitadas · Brasil e exterior
+            </div>
+
+            <button class="search-button" id="searchButton">
+              Buscar empresas
+              <span>→</span>
+            </button>
+
+          </div>
+
+
+          <!-- FILTERS -->
+          <div class="filters-panel" id="filtersPanel">
+
+            <div class="filter-header">
+              <div>
+                <strong>Filtros avançados</strong>
+                <span>Refine os leads encontrados</span>
+              </div>
+
+              <button id="closeFilters">×</button>
+            </div>
+
+
+            <div class="filter-options">
+
+              <label class="check">
+                <input type="checkbox" value="website">
+                <span></span>
+                Site não identificado
+              </label>
+
+              <label class="check">
+                <input type="checkbox" value="instagram">
+                <span></span>
+                Instagram disponível
+              </label>
+
+              <label class="check">
+                <input type="checkbox" value="whatsapp">
+                <span></span>
+                WhatsApp disponível
+              </label>
+
+              <label class="check">
+                <input type="checkbox" value="email">
+                <span></span>
+                E-mail disponível
+              </label>
+
+              <label class="check">
+                <input type="checkbox" value="rating">
+                <span></span>
+                Avaliação acima de 4.0
+              </label>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- EMPTY / RESULTS -->
+        <div class="results-area">
+
+          <div class="results-header">
+
+            <div>
+              <h3 id="resultsTitle">Pronto para prospectar?</h3>
+              <p id="resultsSubtitle">
+                Configure sua busca acima para encontrar empresas.
+              </p>
+            </div>
+
+            <select id="sortResults">
+              <option value="opportunity">Maior oportunidade</option>
+              <option value="rating">Maior avaliação</option>
+              <option value="reviews">Mais avaliações</option>
+            </select>
+
+          </div>
+
+
+          <div id="results" class="results">
+
+            <div class="empty-state">
+
+              <div class="empty-icon">⌕</div>
+
+              <h3>Nenhuma pesquisa realizada</h3>
+
+              <p>
+                Escolha um nicho e uma localização para começar
+                sua prospecção.
+              </p>
+
+              <div class="empty-features">
+                <span>✓ Brasil</span>
+                <span>✓ Exterior</span>
+                <span>✓ Filtros avançados</span>
+                <span>✓ Análise de oportunidade</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- SAVED -->
+      <section class="section" id="savedSection">
+
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">SEUS LEADS</div>
+            <h2>Leads salvos</h2>
+            <p>Empresas que você marcou para analisar depois.</p>
+          </div>
+        </div>
+
+        <div id="savedResults" class="results"></div>
+
+      </section>
+
+
+      <!-- HISTORY -->
+      <section class="section" id="historySection">
+
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">ATIVIDADE</div>
+            <h2>Histórico de pesquisas</h2>
+            <p>Veja as pesquisas realizadas anteriormente.</p>
+          </div>
+        </div>
+
+        <div id="historyResults" class="history-list"></div>
+
+      </section>
+
+
+      <!-- APPROACHES -->
+      <section class="section" id="approachesSection">
+
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">OUTREACH</div>
+            <h2>Abordagens</h2>
+            <p>Mensagens para iniciar contato com seus leads.</p>
+          </div>
+        </div>
+
+        <div class="approach-library">
+
+          <div class="approach-card">
+            <span class="approach-icon">01</span>
+            <h3>Primeiro contato</h3>
+            <p>
+              Abordagem profissional para apresentar seus serviços
+              sem parecer uma mensagem automática.
+            </p>
+            <button onclick="copyTemplate('first')">
+              Copiar mensagem
+            </button>
+          </div>
+
+          <div class="approach-card">
+            <span class="approach-icon">02</span>
+            <h3>Apresentação de prévia</h3>
+            <p>
+              Mensagem para enviar uma arte, site ou material criado
+              especificamente para o estabelecimento.
+            </p>
+            <button onclick="copyTemplate('preview')">
+              Copiar mensagem
+            </button>
+          </div>
+
+          <div class="approach-card">
+            <span class="approach-icon">03</span>
+            <h3>Follow-up</h3>
+            <p>
+              Mensagem curta para retomar o contato depois de alguns dias.
+            </p>
+            <button onclick="copyTemplate('followup')">
+              Copiar mensagem
+            </button>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- SETTINGS -->
+      <section class="section" id="settingsSection">
+
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">SISTEMA</div>
+            <h2>Configurações</h2>
+            <p>Preferências do seu painel.</p>
+          </div>
+        </div>
+
+        <div class="settings-card">
+
+          <div class="setting">
+            <div>
+              <strong>Modo privado</strong>
+              <span>Este painel foi configurado para uso pessoal.</span>
+            </div>
+
+            <div class="toggle active">
+              <span></span>
+            </div>
+          </div>
+
+          <div class="setting">
+            <div>
+              <strong>Salvar pesquisas automaticamente</strong>
+              <span>Registre suas buscas no histórico.</span>
+            </div>
+
+            <div class="toggle active">
+              <span></span>
+            </div>
+          </div>
+
+          <div class="setting">
+            <div>
+              <strong>Dados locais</strong>
+              <span>Leads salvos ficam armazenados neste navegador.</span>
+            </div>
+
+            <button class="danger-button" onclick="clearAllData()">
+              Limpar dados
+            </button>
+          </div>
+
+        </div>
+
+      </section>
 
     </main>
 
-</div>
+  </div>
 
 
-<!-- MODAL PRO -->
-<div class="modal-overlay" id="proModal">
+  <!-- OPPORTUNITY MODAL -->
+  <div class="modal-overlay" id="opportunityModal">
 
-    <div class="modal">
+    <div class="opportunity-modal">
 
-        <button
-            class="modal-close"
-            onclick="closePro()"
-        >
-            ×
-        </button>
+      <button class="modal-close" onclick="closeOpportunity()">×</button>
 
-        <div class="modal-icon">
-            ⚡
-        </div>
-
-        <span class="eyebrow">
-            LEADSPEED PRO
-        </span>
-
-        <h2>
-            Prospecte muito mais.
-        </h2>
-
-        <p>
-            Desbloqueie recursos avançados para encontrar
-            mais oportunidades.
-        </p>
-
-        <div class="pro-price">
-            <strong>R$19,90</strong>
-            <span>/mês</span>
-        </div>
-
-        <ul>
-            <li>✓ 200 créditos por mês</li>
-            <li>✓ Busca internacional</li>
-            <li>✓ Categorias avançadas</li>
-            <li>✓ Filtros avançados</li>
-            <li>✓ Score de oportunidade</li>
-            <li>✓ Leads salvos e histórico</li>
-        </ul>
-
-        <button class="modal-pro-button">
-            Quero ser Pro →
-        </button>
+      <div id="opportunityContent"></div>
 
     </div>
 
-</div>
+  </div>
 
 
-<script src="script.js"></script>
+  <!-- TOAST -->
+  <div class="toast" id="toast">
+    <span>✓</span>
+    <p id="toastMessage">Copiado!</p>
+  </div>
+
+
+  <script src="script.js"></script>
 
 </body>
 </html>
