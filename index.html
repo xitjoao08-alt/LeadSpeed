@@ -1,1 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>LeadSpeed — Prospecção Inteligente</title>
+
+    <meta
+        name="description"
+        content="Encontre empresas e transforme oportunidades em clientes com o LeadSpeed."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-logo">L</div>
+
+            <div class="brand-name">
+                Lead<span>Speed</span>
+            </div>
+        </div>
+
+
+        <nav class="navigation">
+
+            <button class="nav-item active">
+                <span class="nav-icon">⌕</span>
+                <span>Buscar leads</span>
+            </button>
+
+            <button class="nav-item">
+                <span class="nav-icon">☆</span>
+                <span>Leads salvos</span>
+            </button>
+
+            <button class="nav-item">
+                <span class="nav-icon">◷</span>
+                <span>Histórico</span>
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <div class="pro-card">
+
+                <div class="pro-icon">⚡</div>
+
+                <strong>LeadSpeed Pro</strong>
+
+                <p>
+                    200 créditos por mês,
+                    busca internacional e
+                    recursos avançados.
+                </p>
+
+                <button onclick="openPro()">
+                    Conhecer o Pro →
+                </button>
+
+            </div>
+
+
+            <div class="profile">
+
+                <div class="profile-avatar">
+                    J
+                </div>
+
+                <div class="profile-info">
+                    <strong>João</strong>
+                    <span>Plano grátis</span>
+                </div>
+
+                <button class="profile-menu">
+                    •••
+                </button>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div class="welcome">
+
+                <span class="eyebrow">
+                    PROSPECÇÃO INTELIGENTE
+                </span>
+
+                <h1>
+                    Encontre seus próximos
+                    <span>clientes.</span>
+                </h1>
+
+                <p>
+                    Pesquise empresas, descubra oportunidades
+                    e comece novas conversas.
+                </p>
+
+            </div>
+
+
+            <div class="credit-box">
+
+                <span>SEUS CRÉDITOS</span>
+
+                <div>
+                    <strong id="creditCount">10</strong>
+                    <small>/ 10</small>
+                </div>
+
+                <button onclick="openPro()">
+                    Comprar créditos
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- SEARCH -->
+        <section class="search-card">
+
+            <div class="search-heading">
+
+                <div class="search-heading-icon">
+                    ⌕
+                </div>
+
+                <div>
+                    <h2>Nova busca</h2>
+
+                    <p>
+                        Encontre negócios dentro do seu público-alvo.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="search-form">
+
+                <div class="input-group">
+
+                    <label for="category">
+                        Categoria
+                    </label>
+
+                    <select id="category">
+
+                        <option value="">
+                            Selecione uma categoria
+                        </option>
+
+                        <option value="Restaurante">
+                            Restaurante
+                        </option>
+
+                        <option value="Pizzaria">
+                            Pizzaria
+                        </option>
+
+                        <option value="Pet Shop">
+                            Pet Shop
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="location">
+                        Localização
+                    </label>
+
+                    <input
+                        id="location"
+                        type="text"
+                        placeholder="Ex: Jales, SP"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="radius">
+                        Raio
+                    </label>
+
+                    <select id="radius">
+
+                        <option value="5">
+                            5 km
+                        </option>
+
+                        <option value="10">
+                            10 km
+                        </option>
+
+                        <option value="25">
+                            25 km
+                        </option>
+
+                        <option value="50">
+                            50 km
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    class="search-button"
+                    id="searchButton"
+                    onclick="searchLeads()"
+                >
+
+                    <span class="search-symbol">⌕</span>
+
+                    <span>
+                        Buscar oportunidades
+                    </span>
+
+                    <small>
+                        3 créditos
+                    </small>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTADOS -->
+        <section class="results-section">
+
+            <div class="section-header">
+
+                <div>
+                    <span class="section-eyebrow">
+                        OPORTUNIDADES
+                    </span>
+
+                    <h2>
+                        Empresas encontradas
+                    </h2>
+                </div>
+
+                <button class="filter-button">
+                    ☷ Filtros
+                </button>
+
+            </div>
+
+
+            <div id="results">
+
+                <div class="empty-state">
+
+                    <div class="empty-icon">
+                        ⌕
+                    </div>
+
+                    <h3>
+                        Comece sua prospecção
+                    </h3>
+
+                    <p>
+                        Escolha uma categoria, informe a localização
+                        e encontre novas oportunidades.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- MODAL PRO -->
+<div class="modal-overlay" id="proModal">
+
+    <div class="modal">
+
+        <button
+            class="modal-close"
+            onclick="closePro()"
+        >
+            ×
+        </button>
+
+        <div class="modal-icon">
+            ⚡
+        </div>
+
+        <span class="eyebrow">
+            LEADSPEED PRO
+        </span>
+
+        <h2>
+            Prospecte muito mais.
+        </h2>
+
+        <p>
+            Desbloqueie recursos avançados para encontrar
+            mais oportunidades.
+        </p>
+
+        <div class="pro-price">
+            <strong>R$19,90</strong>
+            <span>/mês</span>
+        </div>
+
+        <ul>
+            <li>✓ 200 créditos por mês</li>
+            <li>✓ Busca internacional</li>
+            <li>✓ Categorias avançadas</li>
+            <li>✓ Filtros avançados</li>
+            <li>✓ Score de oportunidade</li>
+            <li>✓ Leads salvos e histórico</li>
+        </ul>
+
+        <button class="modal-pro-button">
+            Quero ser Pro →
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
